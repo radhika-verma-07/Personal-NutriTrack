@@ -29,7 +29,7 @@ function Login() {
 
     try {
       const response = await fetch(
-        "https://personal-nutritrack-api.onrender.com/",
+        "https://personal-nutritrack-api.onrender.com/api/users/login",
         {
           method: "POST",
           headers: {
