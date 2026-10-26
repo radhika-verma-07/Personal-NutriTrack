@@ -59,7 +59,7 @@ function ActivityTracker() {
 
     try {
       const response = await fetch(
-        `https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/activities/user/${userId}`,
+        `https://personal-nutritrack-api.onrender.com/api/activities/user/${userId}`,
       );
 
       const data = await response.json();
@@ -123,7 +123,7 @@ function ActivityTracker() {
       };
 
       const response = await fetch(
-        "https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/activities",
+        "https://personal-nutritrack-api.onrender.com/api/activities",
         {
           method: "POST",
 
@@ -170,7 +170,7 @@ function ActivityTracker() {
 
     try {
       const response = await fetch(
-        `https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/activities/${id}`,
+        `https://personal-nutritrack-api.onrender.com/api/activities/${id}`,
         {
           method: "DELETE",
         },

@@ -100,7 +100,7 @@ function FoodUpload() {
 
     try {
       const response = await fetch(
-        "https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/analyze-food",
+        "https://personal-nutritrack-api.onrender.com/api/analyze-food",
         {
           method: "POST",
           headers: {
@@ -146,7 +146,7 @@ function FoodUpload() {
 
     try {
       const response = await fetch(
-        "https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/estimate-food",
+        "https://personal-nutritrack-api.onrender.com/api/estimate-food",
         {
           method: "POST",
           headers: {
@@ -219,7 +219,7 @@ function FoodUpload() {
       };
 
       const response = await fetch(
-        "https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/foods",
+        "https://personal-nutritrack-api.onrender.com/api/foods",
         {
           method: "POST",
           headers: {

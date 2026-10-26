@@ -33,16 +33,16 @@ function WeeklyAnalysis() {
 
         const requests = await Promise.all([
           fetch(
-            `https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/users/${userId}`,
+            `https://personal-nutritrack-api.onrender.com/api/users/${userId}`,
           ),
           fetch(
-            `https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/foods/user/${userId}`,
+            `https://personal-nutritrack-api.onrender.com/api/foods/user/${userId}`,
           ),
           fetch(
-            `https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/activities/user/${userId}`,
+            `https://personal-nutritrack-api.onrender.com/api/activities/user/${userId}`,
           ),
           fetch(
-            `https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/weights/user/${userId}`,
+            `https://personal-nutritrack-api.onrender.com/api/weights/user/${userId}`,
           ),
         ]);
 

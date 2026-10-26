@@ -28,7 +28,7 @@ function WeightTracker() {
       setError("");
 
       const response = await fetch(
-        `https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/weights/user/${userId}`,
+        `https://personal-nutritrack-api.onrender.com/api/weights/user/${userId}`,
       );
 
       const data = await response.json();
@@ -89,7 +89,7 @@ function WeightTracker() {
       setLoading(true);
 
       const response = await fetch(
-        "https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/weights",
+        "https://personal-nutritrack-api.onrender.com/api/weights",
         {
           method: "POST",
 
@@ -143,7 +143,7 @@ function WeightTracker() {
       setError("");
 
       const response = await fetch(
-        `https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/weights/${id}`,
+        `https://personal-nutritrack-api.onrender.com/api/weights/${id}`,
         {
           method: "DELETE",
         },
