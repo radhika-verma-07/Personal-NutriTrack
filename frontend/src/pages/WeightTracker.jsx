@@ -28,7 +28,7 @@ function WeightTracker() {
       setError("");
 
       const response = await fetch(
-        `http://localhost:5000/api/weights/user/${userId}`,
+        `https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/weights/user/${userId}`,
       );
 
       const data = await response.json();
@@ -88,18 +88,21 @@ function WeightTracker() {
     try {
       setLoading(true);
 
-      const response = await fetch("http://localhost:5000/api/weights", {
-        method: "POST",
+      const response = await fetch(
+        "https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/weights",
+        {
+          method: "POST",
 
-        headers: {
-          "Content-Type": "application/json",
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+          body: JSON.stringify({
+            userId: userId,
+            weight: weightValue,
+          }),
         },
-
-        body: JSON.stringify({
-          userId: userId,
-          weight: weightValue,
-        }),
-      });
+      );
 
       const data = await response.json();
 
@@ -139,9 +142,12 @@ function WeightTracker() {
     try {
       setError("");
 
-      const response = await fetch(`http://localhost:5000/api/weights/${id}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/weights/${id}`,
+        {
+          method: "DELETE",
+        },
+      );
 
       const data = await response.json();
 

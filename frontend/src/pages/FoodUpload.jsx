@@ -99,13 +99,16 @@ function FoodUpload() {
     resetResult();
 
     try {
-      const response = await fetch("http://localhost:5000/api/analyze-food", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/analyze-food",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ image: imageData }),
         },
-        body: JSON.stringify({ image: imageData }),
-      });
+      );
 
       const data = await response.json();
 
@@ -142,16 +145,19 @@ function FoodUpload() {
     resetResult();
 
     try {
-      const response = await fetch("http://localhost:5000/api/estimate-food", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/estimate-food",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            foodName,
+            servingSize: servingSize.trim(),
+          }),
         },
-        body: JSON.stringify({
-          foodName,
-          servingSize: servingSize.trim(),
-        }),
-      });
+      );
 
       const data = await response.json();
 
@@ -212,13 +218,16 @@ function FoodUpload() {
         image: mode === "photo" ? imageData : "",
       };
 
-      const response = await fetch("http://localhost:5000/api/foods", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/foods",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
         },
-        body: JSON.stringify(payload),
-      });
+      );
 
       const data = await response.json();
 

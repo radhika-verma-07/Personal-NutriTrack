@@ -26,7 +26,7 @@ function FoodVault() {
       setError("");
 
       const response = await fetch(
-        `http://localhost:5000/api/foods/user/${userId}`,
+        `https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/foods/user/${userId}`,
       );
 
       const data = await response.json();
@@ -65,9 +65,12 @@ function FoodVault() {
     try {
       setError("");
 
-      const response = await fetch(`http://localhost:5000/api/foods/${id}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/foods/${id}`,
+        {
+          method: "DELETE",
+        },
+      );
 
       const data = await response.json();
 

@@ -59,7 +59,7 @@ function ActivityTracker() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/activities/user/${userId}`,
+        `https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/activities/user/${userId}`,
       );
 
       const data = await response.json();
@@ -122,15 +122,18 @@ function ActivityTracker() {
         date: new Date().toISOString(),
       };
 
-      const response = await fetch("http://localhost:5000/api/activities", {
-        method: "POST",
+      const response = await fetch(
+        "https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/activities",
+        {
+          method: "POST",
 
-        headers: {
-          "Content-Type": "application/json",
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+          body: JSON.stringify(activityData),
         },
-
-        body: JSON.stringify(activityData),
-      });
+      );
 
       const data = await response.json();
 
@@ -167,7 +170,7 @@ function ActivityTracker() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/activities/${id}`,
+        `https://dashboard.render.com/web/srv-dbfnf98u01pc73bt6fcg/deploys/dep-dbfnf9gu01pc73bt6hfg?r=2026-10-26%4015%3A53%3A14%7E2026-10-26%4015%3A56%3A39/api/activities/${id}`,
         {
           method: "DELETE",
         },
