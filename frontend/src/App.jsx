@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
-import Login from "./pages/Login";
+import Login from "./pages/Login.jsx";
 import Dashboard from "./pages/Dashboard";
 import FoodUpload from "./pages/FoodUpload";
 import FoodVault from "./pages/FoodVault";
